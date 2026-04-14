@@ -2,11 +2,14 @@
 
 import { type Todo } from "@/src/components/TodoList";
 import TodoSample from "@/src/components/TodoSample";
+import TodoSample2 from "@/src/components/TodoSample2";
 import { useState } from "react";
 
 export default function TodosPage() {
   const [todos, setTodos] = useState<Todo[]>([
     { id: "1", title: "Todo 1", completed: false },
+    { id: "2", title: "Todo 2", completed: false },
+    { id: "3", title: "Todo 3", completed: false },
   ]);
 
   const handleAddTodo = (title: string) => {
@@ -29,8 +32,8 @@ export default function TodosPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h3 className="text-2xl font-bold mb-4">Todos</h3>
+    <div className="min-h-screen bg-gray-50 px-6 py-10">
+      <h3 className="mb-6 text-center text-2xl font-bold">Todos</h3>
       {/* <TodoInput onAdd={handleAddTodo} />
 
       <TodoList
@@ -39,7 +42,16 @@ export default function TodosPage() {
         onDelete={handleDeleteTodo}
       /> */}
 
-      <TodoSample />
+      <div className="grid min-h-[calc(100vh-8rem)] grid-cols-1 gap-6 lg:grid-cols-2">
+        <section className="rounded-xl bg-white p-6 shadow-sm">
+          <h4 className="mb-4 text-lg font-bold">TodoSample</h4>
+          <TodoSample />
+        </section>
+        <section className="rounded-xl bg-white p-6 shadow-sm">
+          <h4 className="mb-4 text-lg font-bold">TodoSample2</h4>
+          <TodoSample2 todos={todos} />
+        </section>
+      </div>
     </div>
   );
 }

@@ -14,6 +14,7 @@ export default function TodoSample() {
     { id: "1", title: "리액트 공부", completed: false },
     { id: "2", title: "투두 만들기", completed: true },
   ]);
+  const isDone = todos.every((todo) => todo.completed);
 
   const handleAddTodo = () => {
     const trimmedTitle = title.trim();
@@ -36,8 +37,8 @@ export default function TodoSample() {
   const handleToggleTodo = (id: string) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
+      ),
     );
   };
 
@@ -46,9 +47,10 @@ export default function TodoSample() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-4">
+    <div className="flex w-full flex-col items-center px-4 py-6">
       <div className="w-full max-w-md space-y-4">
         <h3 className="text-2xl font-bold">Todos</h3>
+        <h4 className="text-lg font-bold">{isDone ? "완료" : "진행중"}</h4>
 
         <div className="flex gap-2">
           <input

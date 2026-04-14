@@ -36,7 +36,7 @@ export default function TodoItem({
         </span>
       </label>
       <button onClick={() => onDelete(id)} className="text-red-500">
-          Delete
+          삭제
       </button>
     </li>
   );
