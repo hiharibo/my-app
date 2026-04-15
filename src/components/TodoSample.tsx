@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-type Todo = {
-  id: string;
-  title: string;
-  completed: boolean;
-};
+import { Todo } from "./TodoList";
 
 export default function TodoSample() {
   const [title, setTitle] = useState("");
