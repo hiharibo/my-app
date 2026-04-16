@@ -34,6 +34,7 @@ function TodoInput({ onAdd }: TodoInputProps) {
         className="border border-gray-300 rounded-md p-2"
       />
       <button
+        type="button"
         onClick={handleAdd}
         className="bg-blue-500 text-white rounded-md p-2"
       >

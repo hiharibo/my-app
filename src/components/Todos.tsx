@@ -1,7 +1,7 @@
 "use client";
 
 import { Todo } from "./TodoList";
-import TodoListTile from "./TodoListItem";
+import TodoListItem from "./TodoListItem";
 
 type TodosProps = {
   todos: Todo[];
@@ -13,7 +13,7 @@ function Todos({ todos, onToggle, onDelete }: TodosProps) {
   return (
     <ul className="space-y-3">
       {todos.map((todo) => (
-        <TodoListTile
+        <TodoListItem
           key={todo.id}
           todo={todo}
           onToggle={() => onToggle(todo.id)}

@@ -1,5 +1,7 @@
 "use client";
 
+import clsx from "clsx";
+
 type TodoLabelProps = {
   title: string;
   completed: boolean;
@@ -8,9 +10,9 @@ type TodoLabelProps = {
 function TodoLabel({ title, completed }: TodoLabelProps) {
   return (
     <span
-      className={`text-lg font-medium ${
-        completed ? "text-gray-400 line-through" : ""
-      }`}
+      className={clsx("text-lg font-medium", {
+        "text-gray-400 line-through": completed,
+      })}
     >
       {title}
     </span>

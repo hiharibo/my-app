@@ -47,7 +47,7 @@ function TodoSample2() {
 
   return (
     <div className="flex w-full flex-col items-center px-4 py-6">
-      <ul className="w-full max-w-md space-y-4">
+      <section className="w-full max-w-md space-y-4">
         <TodoTitle title="Todos2" />
         <StatusTitle isDone={isDone} />
         <TodoInputBox
@@ -60,7 +60,7 @@ function TodoSample2() {
           onToggle={handleToggleTodo}
           onDelete={handleDeleteTodo}
         />
-      </ul>
+      </section>
     </div>
   );
 }
