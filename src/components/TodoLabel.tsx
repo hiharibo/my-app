@@ -5,14 +5,14 @@ type TodoLabelProps = {
   completed: boolean;
 };
 
-export default function TodoLabel(props: TodoLabelProps) {
+export default function TodoLabel({ title, completed }: TodoLabelProps) {
   return (
     <span
       className={`text-lg font-medium ${
-        props.completed ? "text-gray-400 line-through" : ""
+        completed ? "text-gray-400 line-through" : ""
       }`}
     >
-      {props.title}
+      {title}
     </span>
   );
 }

@@ -9,14 +9,15 @@ type TodoInputBoxProps = {
   onAddTodo: () => void;
 };
 
-export default function TodoInputBox(props: TodoInputBoxProps) {
+export default function TodoInputBox({
+  title,
+  onChange,
+  onAddTodo,
+}: TodoInputBoxProps) {
   return (
     <div className="flex gap-2">
-      <Input
-        title={props.title}
-        onChange={(e) => props.onChange(e.target.value)}
-      />
-      <AddButton onClick={props.onAddTodo} />
+      <Input title={title} onChange={(e) => onChange(e.target.value)} />
+      <AddButton onClick={onAddTodo} />
     </div>
   );
 }

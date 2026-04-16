@@ -1,16 +1,16 @@
 "use client";
 
 type CheckBoxProps = {
-  onToggle: () => void;
+  onChange: () => void;
   completed: boolean;
 };
 
-export default function CheckBox(props: CheckBoxProps) {
+export default function CheckBox({ onChange, completed }: CheckBoxProps) {
   return (
     <input
       type="checkbox"
-      checked={props.completed}
-      onChange={props.onToggle}
+      checked={completed}
+      onChange={onChange}
       className="h-4 w-4"
     />
   );

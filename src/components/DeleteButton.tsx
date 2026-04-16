@@ -4,9 +4,9 @@ type DeleteButtonProps = {
   onClick: () => void;
 };
 
-export default function DeleteButton(props: DeleteButtonProps) {
+export default function DeleteButton({ onClick }: DeleteButtonProps) {
   return (
-    <button onClick={props.onClick} className="text-red-500">
+    <button onClick={onClick} className="text-red-500">
       삭제
     </button>
   );

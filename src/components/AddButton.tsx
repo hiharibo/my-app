@@ -4,10 +4,10 @@ type AddButtonProps = {
   onClick: () => void;
 };
 
-export default function AddButton(props: AddButtonProps) {
+export default function AddButton({ onClick }: AddButtonProps) {
   return (
     <button
-      onClick={props.onClick}
+      onClick={onClick}
       className="rounded-md bg-blue-500 px-4 py-2 text-white"
     >
       추가

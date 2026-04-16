@@ -1,7 +1,7 @@
 "use client";
 
 import { Todo } from "./TodoList";
-import TodoListTile from "./TodoListTile";
+import TodoListTile from "./TodoListItem";
 
 type TodosProps = {
   todos: Todo[];
@@ -9,8 +9,7 @@ type TodosProps = {
   onDelete: (id: string) => void;
 };
 
-export default function Todos(props: TodosProps) {
-  const { todos, onToggle, onDelete } = props;
+export default function Todos({ todos, onToggle, onDelete }: TodosProps) {
   return (
     <ul className="space-y-3">
       {todos.map((todo) => (
