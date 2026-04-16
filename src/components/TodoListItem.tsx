@@ -11,11 +11,7 @@ type TodoListItemProps = {
   onDelete: () => void;
 };
 
-export default function TodoListItem({
-  todo,
-  onToggle,
-  onDelete,
-}: TodoListItemProps) {
+function TodoListItem({ todo, onToggle, onDelete }: TodoListItemProps) {
   return (
     <li
       className="flex items-center justify-between gap-3 rounded-md border px-4 py-3"
@@ -29,3 +25,5 @@ export default function TodoListItem({
     </li>
   );
 }
+
+export default TodoListItem;

@@ -4,7 +4,7 @@ type AddButtonProps = {
   onClick: () => void;
 };
 
-export default function AddButton({ onClick }: AddButtonProps) {
+function AddButton({ onClick }: AddButtonProps) {
   return (
     <button
       onClick={onClick}
@@ -14,3 +14,5 @@ export default function AddButton({ onClick }: AddButtonProps) {
     </button>
   );
 }
+
+export default AddButton;

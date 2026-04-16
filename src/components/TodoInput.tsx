@@ -6,7 +6,7 @@ type TodoInputProps = {
   onAdd: (title: string) => void;
 };
 
-export default function TodoInput({ onAdd }: TodoInputProps) {
+function TodoInput({ onAdd }: TodoInputProps) {
   const [title, setTitle] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,3 +42,4 @@ export default function TodoInput({ onAdd }: TodoInputProps) {
     </div>
   );
 }
+export default TodoInput;

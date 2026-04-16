@@ -7,7 +7,7 @@ import { Todo } from "./TodoList";
 import TodoTitle from "./TodoTitle";
 import Todos from "./Todos";
 
-export default function TodoSample2() {
+function TodoSample2() {
   const [title, setTitle] = useState("");
   const [todos, setTodos] = useState<Todo[]>([
     { id: "1", title: "리액트 공부", completed: false },
@@ -64,3 +64,5 @@ export default function TodoSample2() {
     </div>
   );
 }
+
+export default TodoSample2;

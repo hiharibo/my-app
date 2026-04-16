@@ -1,11 +1,11 @@
 "use client";
 
-type CheckBoxProps = {
+interface CheckBoxProps {
   onChange: () => void;
   completed: boolean;
-};
+}
 
-export default function CheckBox({ onChange, completed }: CheckBoxProps) {
+function CheckBox({ onChange, completed }: CheckBoxProps) {
   return (
     <input
       type="checkbox"
@@ -15,3 +15,5 @@ export default function CheckBox({ onChange, completed }: CheckBoxProps) {
     />
   );
 }
+
+export default CheckBox;

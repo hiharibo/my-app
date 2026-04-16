@@ -5,7 +5,7 @@ type TodoLabelProps = {
   completed: boolean;
 };
 
-export default function TodoLabel({ title, completed }: TodoLabelProps) {
+function TodoLabel({ title, completed }: TodoLabelProps) {
   return (
     <span
       className={`text-lg font-medium ${
@@ -16,3 +16,5 @@ export default function TodoLabel({ title, completed }: TodoLabelProps) {
     </span>
   );
 }
+
+export default TodoLabel;

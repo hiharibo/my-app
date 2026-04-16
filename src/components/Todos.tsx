@@ -9,7 +9,7 @@ type TodosProps = {
   onDelete: (id: string) => void;
 };
 
-export default function Todos({ todos, onToggle, onDelete }: TodosProps) {
+function Todos({ todos, onToggle, onDelete }: TodosProps) {
   return (
     <ul className="space-y-3">
       {todos.map((todo) => (
@@ -23,3 +23,5 @@ export default function Todos({ todos, onToggle, onDelete }: TodosProps) {
     </ul>
   );
 }
+
+export default Todos;
