@@ -22,14 +22,17 @@ function TodoSample2() {
       return;
     }
 
-    setTodos((prevTodos) => [
-      ...prevTodos,
-      {
-        id: crypto.randomUUID(),
-        title: trimmedTitle,
-        completed: false,
-      },
-    ]);
+    const newTodo = {
+      id: crypto.randomUUID(),
+      title: trimmedTitle,
+      completed: false,
+    };
+
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
+    handleResetTitle();
+  };
+
+  const handleResetTitle = () => {
     setTitle("");
   };
 
@@ -48,11 +51,11 @@ function TodoSample2() {
   return (
     <div className="flex w-full flex-col items-center px-4 py-6">
       <section className="w-full max-w-md space-y-4">
-        <TodoTitle title="Todos2" />
+        <TodoTitle title="Todos" />
         <StatusTitle isDone={isDone} />
         <TodoInputBox
           title={title}
-          onChange={setTitle}
+          onChange={(e) => setTitle(e.target.value)}
           onAddTodo={handleAddTodo}
         />
         <Todos
