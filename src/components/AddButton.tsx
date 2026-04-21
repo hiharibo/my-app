@@ -1,18 +1,17 @@
 "use client";
 
-type AddButtonProps = {
-  onClick: () => void;
-};
+import CustomButton from "./CustomButton";
 
-function AddButton({ onClick }: AddButtonProps) {
+const AddButton = ({ onClick }: { onClick: () => void }) => {
   return (
-    <button
-      onClick={onClick}
+    <CustomButton
+      type="button"
       className="rounded-md bg-blue-500 px-4 py-2 text-white"
+      onClick={onClick}
     >
       추가
-    </button>
+    </CustomButton>
   );
-}
+};
 
 export default AddButton;
