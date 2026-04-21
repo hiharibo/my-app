@@ -17,10 +17,12 @@ function TodoListItem({ todo, onToggle, onDelete }: TodoListItemProps) {
       className="flex items-center justify-between gap-3 rounded-md border px-4 py-3"
       key={todo.id}
     >
-      <label className="flex flex-1 cursor-pointer items-center gap-3">
-        <CheckBox completed={todo.completed} onChange={onToggle} />
-        <TodoLabel title={todo.title} completed={todo.completed} />
-      </label>
+      <div className="flex flex-1 cursor-pointer items-center gap-3">
+        <label>
+          <CheckBox completed={todo.completed} onChange={onToggle} />
+          <TodoLabel title={todo.title} completed={todo.completed} />
+        </label>
+      </div>
       <DeleteButton onClick={onDelete} />
     </li>
   );
