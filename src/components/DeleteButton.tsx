@@ -1,15 +1,13 @@
 "use client";
 
-type DeleteButtonProps = {
-  onClick: () => void;
-};
+import CustomButton from "./CustomButton";
 
-function DeleteButton({ onClick }: DeleteButtonProps) {
+const DeleteButton = ({ onClick }: { onClick: () => void }) => {
   return (
-    <button onClick={onClick} className="text-red-500">
+    <CustomButton type="button" className="text-red-500" onClick={onClick}>
       삭제
-    </button>
+    </CustomButton>
   );
-}
+};
 
 export default DeleteButton;
