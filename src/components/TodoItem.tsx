@@ -8,13 +8,7 @@ type TodoItemProps = {
   onDelete: (id: string) => void;
 };
 
-export default function TodoItem({
-  id,
-  title,
-  completed,
-  onToggle,
-  onDelete,
-}: TodoItemProps) {
+function TodoItem({ id, title, completed, onToggle, onDelete }: TodoItemProps) {
   return (
     <li
       key={id}
@@ -36,8 +30,10 @@ export default function TodoItem({
         </span>
       </label>
       <button onClick={() => onDelete(id)} className="text-red-500">
-          삭제
+        삭제
       </button>
     </li>
   );
 }
+
+export default TodoItem;

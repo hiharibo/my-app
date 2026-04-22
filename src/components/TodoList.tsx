@@ -14,12 +14,7 @@ type TodoListProps = {
   onDelete: (id: string) => void;
 };
 
-export default function TodoList({
-  todos,
-  onToggle,
-  onDelete,
-}: TodoListProps) {
-
+function TodoList({ todos, onToggle, onDelete }: TodoListProps) {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Todo List</h1>
@@ -38,3 +33,5 @@ export default function TodoList({
     </div>
   );
 }
+
+export default TodoList;

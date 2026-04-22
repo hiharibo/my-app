@@ -1,7 +1,6 @@
 "use client";
 
 import { type Todo } from "@/src/components/TodoList";
-import TodoSample from "@/src/components/TodoSample";
 import TodoSample2 from "@/src/components/TodoSample2";
 import { useState } from "react";
 
@@ -34,22 +33,11 @@ export default function TodosPage() {
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-10">
       <h3 className="mb-6 text-center text-2xl font-bold">Todos</h3>
-      {/* <TodoInput onAdd={handleAddTodo} />
-
-      <TodoList
-        todos={todos}
-        onToggle={handleToggleTodo}
-        onDelete={handleDeleteTodo}
-      /> */}
 
       <div className="grid min-h-[calc(100vh-8rem)] grid-cols-1 gap-6 lg:grid-cols-2">
         <section className="rounded-xl bg-white p-6 shadow-sm">
-          <h4 className="mb-4 text-lg font-bold">TodoSample</h4>
-          <TodoSample />
-        </section>
-        <section className="rounded-xl bg-white p-6 shadow-sm">
           <h4 className="mb-4 text-lg font-bold">TodoSample2</h4>
-          <TodoSample2 todos={todos} />
+          <TodoSample2 />
         </section>
       </div>
     </div>
