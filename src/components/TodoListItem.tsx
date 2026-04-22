@@ -1,6 +1,6 @@
 "use client";
 
-import CheckBox from "./CheckBox";
+import CustomCheckBox from "./CustomCheckBox";
 import DeleteButton from "./DeleteButton";
 import TodoLabel from "./TodoLabel";
 import { Todo } from "./TodoList";
@@ -19,7 +19,7 @@ function TodoListItem({ todo, onToggle, onDelete }: TodoListItemProps) {
     >
       <div className="flex flex-1 cursor-pointer items-center gap-3">
         <label>
-          <CheckBox completed={todo.completed} onChange={onToggle} />
+          <CustomCheckBox checked={todo.completed} onChange={onToggle} />
           <TodoLabel title={todo.title} completed={todo.completed} />
         </label>
       </div>
